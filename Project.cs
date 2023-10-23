@@ -37,7 +37,7 @@ namespace ConsoleApp19
                         Console.WriteLine("Enter the name of your Library:");
                         string libraryName = Console.ReadLine();
 
-                        // Create a new instance of BookLibrary with the provided name
+                       
                         myLibrary = new BookLibrary { Name = libraryName };
                         Console.WriteLine("Library '" + libraryName + "' has been created.");
                         break;
@@ -46,10 +46,10 @@ namespace ConsoleApp19
                         Console.WriteLine("Enter the name of your Category:");
                         string categoryName = Console.ReadLine();
 
-                        // Create a new instance of the Category class with the provided name
+                        
                         Category newCategory = new Category(categoryName);
 
-                        // Add the new category to the list of categories
+                       
                         categories.Add(newCategory);
                         Console.WriteLine("Category '" + categoryName + "' has been created.");
                         break;
@@ -61,7 +61,7 @@ namespace ConsoleApp19
                         Console.WriteLine("Author:");
                         string authorName = Console.ReadLine();
 
-                        // Display existing categories and let the user choose a category
+                        
                         Console.WriteLine("Choose a category for the book:");
 
                         for (int i = 0; i < categories.Count; i++)
@@ -73,10 +73,10 @@ namespace ConsoleApp19
                         {
                             Category selectedCategory = categories[categoryChoice - 1];
 
-                            // Create a new book with the provided details and selected category
+                           
                             Book newBook = new Book(bookName, authorName, selectedCategory);
 
-                            // Add the new book to the list of newly created books
+                           
                             newBooks.Add(newBook);
 
                             Console.WriteLine("Book has been created.");
@@ -104,7 +104,7 @@ namespace ConsoleApp19
             switch (libraryChoice)
             {
                 case "1":
-                    // Display newly created books (newBooks) for selection
+                   
                     Console.WriteLine("Select a book to add:");
                     for (int i = 0; i < newBooks.Count; i++)
                     {
@@ -113,7 +113,7 @@ namespace ConsoleApp19
 
                     if (int.TryParse(Console.ReadLine(), out int bookChoice) && bookChoice >= 1 && bookChoice <= newBooks.Count)
                     {
-                        // Add the selected book to the library
+                        
                         myLibrary.AddBook(newBooks[bookChoice - 1]);
                         Console.WriteLine("Book has been added to the library.");
                     }
@@ -124,12 +124,12 @@ namespace ConsoleApp19
                     break;
 
                 case "2":
-                    // Show books added to the library
+                    
                     myLibrary.ListAllBooks();
                     break;
 
                 case "3":
-                    // Leave the library menu
+                    
                     break;
 
                 default:
