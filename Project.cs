@@ -8,7 +8,7 @@ namespace ConsoleApp19
         static void Main(string[] args)
         {
             List<Category> categories = new List<Category>();
-            List<Book> newBooks = new List<Book>(); // New list to store newly created books
+            List<Book> newBooks = new List<Book>();
             BookLibrary myLibrary = new BookLibrary();
 
             while (true)
